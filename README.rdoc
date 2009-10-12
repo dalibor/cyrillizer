@@ -12,7 +12,10 @@ Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+$KCODE = 'UTF8' # proper display of UTF8 characters
+require 'rubygems'
+require 'cyrillizer'
+puts 'Konvertiraj go ova na kirilica'.to_cyr
 
 == REQUIREMENTS:
 
