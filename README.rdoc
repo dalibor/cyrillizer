@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-Conversion from latin to cyrillic in Macedonian alphabet
+Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 == FEATURES/PROBLEMS:
 
