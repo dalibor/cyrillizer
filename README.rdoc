@@ -1,10 +1,10 @@
 = cyrillizer
 
-    * http://github.com/dalibor/cyrillizer
+* http://github.com/dalibor/cyrillizer
 
 == DESCRIPTION:
 
-    Character conversion from latin alphabet to Macedonian cyrillic alphabet
+Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 == SYNOPSIS:
 
