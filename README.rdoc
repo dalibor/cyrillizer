@@ -10,7 +10,7 @@ Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 - Ruby 1.8.6, 1.8.7
 
-# $KCODE = 'UTF8' # uncomment this if you have problems with proper display of UTF8 characters
+$KCODE = 'UTF8'
 require 'rubygems'
 require 'cyrillizer'
 puts 'Konvertiraj go ova na kirilica'.to_cyr
@@ -22,9 +22,9 @@ puts 'Konvertiraj go ova na kirilica'.to_cyr
 
 == INSTALL:
 
-gem install gemcutter # install gemcutter
-gem tumble # add gemcutter to gem sources
-gem install cyrillizer # install cyrillizer gem
+gem install gemcutter
+gem tumble
+gem install cyrillizer
 
 == LICENSE:
 
