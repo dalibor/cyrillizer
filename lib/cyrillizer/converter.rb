@@ -1,3 +1,4 @@
+# coding: utf-8
 module Cyrillizer
 	module Converter
 	
@@ -5,15 +6,15 @@ module Cyrillizer
     Cyrillic = %w(Џ   Џ   џ   Ѓ  Ѓ  ѓ  Ж  Ж  ж  Ѕ  Ѕ  ѕ  Љ  Љ  љ  Њ  Њ  њ  Ќ  Ќ  ќ  Ч  Ч  ч  Ш  Ш  ш А а Б б В в Г г Д д Е е З з И и Ј ј К к Л л М м Н н О о П п Р р С с Т т У у Ф ф Х х Ц ц)
 	
 	  def to_cyr
-			encode(self.dup, Latin, Cyrillic)
+			code(self.dup, Latin, Cyrillic)
 	  end
 		
 		def to_cyr!
-			encode(self, Latin, Cyrillic)
+			code(self, Latin, Cyrillic)
 	  end
 		
     private
-    def encode(text, from, to)
+    def code(text, from, to)
       from.each_with_index do |latin, i|
         text.gsub!(latin, to[i])
       end

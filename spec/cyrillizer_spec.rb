@@ -1,11 +1,17 @@
 require File.dirname(__FILE__) + '/spec_helper.rb'
 
-# Time to add your specs!
-# http://rspec.info/
-describe "Place your specs here" do
+describe "Convertor" do
   
-  it "find this spec in spec directory" do
-    # violated "Be sure to write your specs"
+  it "changes original string" do
+    string = 'orginalen'
+		string.to_cyr!.should == 'оргинален'
+		string.should == 'оргинален'
   end
-  
+	
+	it "does not changes original string" do
+    string = 'orginalen'
+		string.to_cyr.should == 'оргинален'
+		string.should == 'orginalen'
+  end
+	
 end

@@ -1,3 +1,8 @@
 
-For more information on cyrillizer, see http://cyrillizer.rubyforge.org
+Usage:
 
+require 'rubygems'
+require 'cyrillizer'
+puts 'Konvertiraj go ova na kirilica'.to_cyr
+
+For more information on cyrillizer, see http://github.com/dalibor/cyrillizer
