@@ -1,92 +1,24 @@
 module Cyrillizer
 	module Converter
+	
+		Latin    = %w(DZH Dzh dzh GJ Gj gj ZH Zh zh DZ Dz dz LJ Lj lj NJ Nj nj KJ Kj kj CH Ch ch SH Sh sh A a B b V v G g D d E e Z z I i J j K k L l M m N n O o P p R r S s T t U u F f H h C c)
+    Cyrillic = %w(Џ   Џ   џ   Ѓ  Ѓ  ѓ  Ж  Ж  ж  Ѕ  Ѕ  ѕ  Љ  Љ  љ  Њ  Њ  њ  Ќ  Ќ  ќ  Ч  Ч  ч  Ш  Ш  ш А а Б б В в Г г Д д Е е З з И и Ј ј К к Л л М м Н н О о П п Р р С с Т т У у Ф ф Х х Ц ц)
+	
 	  def to_cyr
-		  new_string = ''
-		  old_string = self.split('')
-		  string_start = 0
-		  string_end = old_string.size
-		  while string_start < string_end
-			new_string << case old_string[string_start]
-				when 'a'; 'а'
-				when 'b'; 'б'
-				when 'v'; 'в'
-				when 'g';
-					if string_start+1 <= string_end && old_string[string_start+1] == 'j'
-						string_start += 1
-						'ѓ'
-					else
-						'г'
-					end
-				when 'd'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'z'
-						string_start += 1
-						'ѕ'
-					elsif string_start+1 <= string_end && old_string[string_start+1] == 'j'
-						string_start += 1
-						'џ'
-					else
-						'д'
-					end
-				when 'e'; 'е'
-				when 'z'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'h'
-						string_start += 1
-						'ж'
-					else
-						'з'
-					end
-				when 'i'; 'и'
-				when 'j'; 'ј'
-				when 'k'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'j'
-						string_start += 1
-						'ќ'
-					else
-						'к'
-					end
-				when 'l';
-					if string_start+1 <= string_end && old_string[string_start+1] == 'j'
-						string_start += 1
-						'љ'
-					else
-						'л'
-					end
-				when 'm'; 'м'
-				when 'n'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'j'
-						string_start += 1
-						'њ'
-					else
-						'н'
-					end
-				when 'o'; 'о'
-				when 'p'; 'п'
-				when 'r'; 'р'
-				when 's'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'h'
-						string_start += 1
-						'ш'
-					else
-						'с'
-					end
-				when 't'; 'т'
-				when 'u'; 'у'
-				when 'f'; 'ф'
-				when 'h'; 'х'
-				when 'c'; 
-					if string_start+1 <= string_end && old_string[string_start+1] == 'h'
-						string_start += 1
-						'ч'
-					else
-						'ц'
-					end
-				else
-					old_string[string_start]
-			end
-			string_start += 1
-		  end
-		  return new_string
+			encode(self.dup, Latin, Cyrillic)
 	  end
+		
+		def to_cyr!
+			encode(self, Latin, Cyrillic)
+	  end
+		
+    private
+    def encode(text, from, to)
+      from.each_with_index do |latin, i|
+        text.gsub!(latin, to[i])
+      end
+      return text
+		end
 
 	end
 end
