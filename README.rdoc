@@ -8,14 +8,14 @@ Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 == SYNOPSIS:
 
-- Ruby 1.8.6, 1.8.7
+- Ruby version <= 1.8.7
 
     $KCODE = 'UTF8'
     require 'rubygems'
     require 'cyrillizer'
     puts 'Konvertiraj go ova na kirilica'.to_cyr
 
-- Ruby 1.9.1, ...
+- Ruby version >= 1.9.1
 
     require 'cyrillizer'
     puts 'Konvertiraj go ova na kirilica'.to_cyr
@@ -25,6 +25,16 @@ Character conversion from latin alphabet to Macedonian cyrillic alphabet
     gem install gemcutter
     gem tumble
     gem install cyrillizer
+
+To run the scenarios/specs, you have to first install cucumber and rspec gems
+
+    sudo gem install cucumber
+    sudo gem install rspec
+
+And then, use their command line utillities:
+
+    spec spec --options spec/spec.opts
+    cucumber features
 
 == LICENSE:
 
