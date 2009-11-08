@@ -22,9 +22,9 @@ Character conversion from latin alphabet to Macedonian cyrillic alphabet
 
 == INSTALL:
 
-    gem install gemcutter
-    gem tumble
-    gem install cyrillizer
+    sudo gem install gemcutter
+    sudo gem tumble
+    sudo gem install cyrillizer
 
 To run the scenarios/specs, you have to first install cucumber and rspec gems
 
