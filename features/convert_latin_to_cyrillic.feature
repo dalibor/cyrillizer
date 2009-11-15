@@ -11,8 +11,8 @@ Feature: Convert Latin To Cyrilic
       | latin | cyrilic |
       |  a    |    а    |
       |  A    |    А    |
-      |  b		|    б    |
-      |  B		|    Б    |
+      |  b    |    б    |
+      |  B    |    Б    |
       |  v    |    в    |
       |  V    |    В    |
       |  g    |    г    |
@@ -20,8 +20,8 @@ Feature: Convert Latin To Cyrilic
       |  d    |    д    |
       |  D    |    Д    |
       |  gj   |    ѓ    |
-			|  GJ   |    Ѓ    |
-			|  Gj   |    Ѓ    |
+      |  GJ   |    Ѓ    |
+      |  Gj   |    Ѓ    |
       |  e    |    е    |
       |  E    |    Е    |
       |  zh   |    ж    |
@@ -86,7 +86,7 @@ Feature: Convert Latin To Cyrilic
     Then that text will be converted into <cyrilic>
 
     Examples:
-      | latin 					| cyrilic 						|
-      |  abeceda		    |  абецеда    				|
-      |  Cela rechenica |  Цела реченица			|
+      | latin                                | cyrilic                               |
+      | abeceda                              | абецеда                               |
+      | Cela rechenica                       | Цела реченица                         |
 
