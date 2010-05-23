@@ -13,6 +13,14 @@ module Cyrillizer
       code(self, Latin, Cyrillic)
     end
 
+    def to_lat
+      code(self.dup, Cyrillic, Latin)
+    end
+
+    def to_lat!
+      code(self, Cyrillic, Latin)
+    end
+
     private
     def code(text, from, to)
       from.each_with_index do |latin, i|
