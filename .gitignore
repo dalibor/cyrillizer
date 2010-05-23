@@ -1,6 +1,3 @@
 *~
 *.swp
 pkg/*
-script/*
-tasks/*
-tmp/*

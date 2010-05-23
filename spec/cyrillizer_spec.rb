@@ -14,4 +14,16 @@ describe "Convertor" do
     string.should == 'orginalen'
   end
 
+  it "should change original string when using to_lat!" do
+    string = 'оргинален'
+    string.to_lat!.should == 'orginalen'
+    string.should == 'orginalen'
+  end
+
+  it "should not change original string when using to_lat" do
+    string = 'оргинален'
+    string.to_lat.should == 'orginalen'
+    string.should == 'оргинален'
+  end
+
 end

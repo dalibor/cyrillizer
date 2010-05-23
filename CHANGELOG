@@ -1,10 +1,13 @@
+=== 0.1.0 2009-11-08
+
+  * Added to_lat and to_lat! methods
+  * Removed/Simplified development dependencies
+
 === 0.0.2 2009-11-08
 
-* 1 major enhancement:
   * Fixed convertions for upper case latters
 
 === 0.0.1 2009-10-12
 
-* 1 major enhancement:
   * Initial release
 
