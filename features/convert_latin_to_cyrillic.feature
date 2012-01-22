@@ -19,19 +19,17 @@ Feature: Convert Latin To Cyrilic
             | G     | Г        |
             | d     | д        |
             | D     | Д        |
-            | gj    | ѓ        |
-            | GJ    | Ѓ        |
-            | Gj    | Ѓ        |
+            | ð     | ђ        |
+            | Ð     | Ђ        |
+            | dj    | ђ        |
+            | Dj    | Ђ        |
+            | DJ    | Ђ        |
             | e     | е        |
             | E     | Е        |
-            | zh    | ж        |
-            | ZH    | Ж        |
-            | Zh    | Ж        |
+            | ž     | ж        |
+            | Ž     | Ж        |
             | z     | з        |
             | Z     | З        |
-            | dz    | ѕ        |
-            | DZ    | Ѕ        |
-            | Dz    | Ѕ        |
             | i     | и        |
             | I     | И        |
             | j     | ј        |
@@ -60,9 +58,8 @@ Feature: Convert Latin To Cyrilic
             | S     | С        |
             | t     | т        |
             | T     | Т        |
-            | kj    | ќ        |
-            | KJ    | Ќ        |
-            | Kj    | Ќ        |
+            | Ć     | Ћ        |
+            | ć     | ћ        |
             | u     | у        |
             | U     | У        |
             | f     | ф        |
@@ -71,12 +68,19 @@ Feature: Convert Latin To Cyrilic
             | H     | Х        |
             | c     | ц        |
             | C     | Ц        |
+            | č     | ч        |
+            | Č     | Ч        |
             | ch    | ч        |
             | CH    | Ч        |
             | Ch    | Ч        |
-            | dzh   | џ        |
-            | DZH   | Џ        |
-            | Dzh   | Џ        |
+            | dz    | џ        |
+            | DZ    | Џ        |
+            | Dz    | Џ        |
+            | dž    | џ        |
+            | DŽ    | Џ        |
+            | Dž    | Џ        |
+            | š     | ш        |
+            | Š     | Ш        |
             | sh    | ш        |
             | SH    | Ш        |
             | Sh    | Ш        |
@@ -86,6 +90,8 @@ Feature: Convert Latin To Cyrilic
         Then that text will be converted into <Cyrillic>
 
         Examples:
-            | Latin           | Cyrillic       |
-            | abeceda         | абецеда        |
-            | Cela rechenica  | Цела реченица  |
+            | Latin          | Cyrillic      |
+            | abeceda        | абецеда       |
+            | Cela rechenica | Цела реченица |
+            | Cela rečenica  | Цела реченица |
+            | Džečćž         | Џечћж         |
