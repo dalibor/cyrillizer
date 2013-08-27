@@ -1,4 +1,5 @@
-# coding: utf-8
+# encoding: utf-8
+
 module Cyrillizer
   module Converter
 
@@ -30,9 +31,4 @@ module Cyrillizer
     end
 
   end
-end
-
-# Add to_cyr method to all Strings
-class String
-  include Cyrillizer::Converter
 end
