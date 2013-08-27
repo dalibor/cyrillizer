@@ -22,15 +22,16 @@ module Cyrillizer
     private
 
     def code(text, alphabet)
-      text.each_char do |ch|
-        text[ch] = alphabet[ch] if alphabet.has_key? ch
+      from = alphabet.keys
+      to   = alphabet.values
+      from.each_with_index do |latin, i|
+        text.gsub!(latin, to[i])
       end
+       text
     end
 
     def alphabet
-      const = Cyrillizer.language.to_s.capitalize
-      Cyrillizer::Alphabet.const_defined?(const) ? Cyrillizer::Alphabet.const_get(const) : {}
+      Cyrillizer.alphabet
     end
-
   end
 end

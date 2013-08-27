@@ -15,6 +15,21 @@ describe "Convertor" do
     end
   end
 
+  context "different language" do
+    before :each do
+      Cyrillizer.language = :russian
+    end
+
+    after :each do
+      Cyrillizer.language = nil
+    end
+
+    it "can convert from different language" do
+      "пульт управления".to_lat.should == "pult upravleniya"
+      "pult upravleniya".to_cyr.should == "пулт управления"
+    end
+  end
+
   context "object reference" do
     it "changes original string when using to_cyr!" do
       string = 'orginalen'
