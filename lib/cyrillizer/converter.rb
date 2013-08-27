@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-require_relative 'alphabet'
-
 module Cyrillizer
   module Converter
 

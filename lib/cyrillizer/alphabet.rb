@@ -1,13 +1,14 @@
-# coding: utf-8
+# encoding: utf-8
+
 module Cyrillizer
-  
+
   class << self
     attr_writer :language
     def language
       @language || :macedonian
     end
   end
-  
+
   module Alphabet
 
     Macedonian = {'Џ' => 'DZH', 'Џ' => 'Dzh', 'џ' => 'dzh', 'Ѓ' => 'GJ', 'Ѓ' => 'Gj', 'ѓ' => 'gj', 'Ж' => 'ZH', 'Ж' => 'Zh', 'ж' => 'zh', 'Ѕ' => 'DZ', 'Ѕ' => 'Dz', 'ѕ' => 'dz',
