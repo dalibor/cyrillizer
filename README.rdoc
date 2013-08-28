@@ -1,46 +1,27 @@
 = cyrillizer
 
-* http://github.com/dalibor/cyrillizer
+Character conversion from latin to cyrillic and vice versa
 
-== DESCRIPTION:
-
-Character conversion from latin alphabet to Macedonian cyrillic alphabet and vice versa
-
-== SYNOPSIS:
-
-- Ruby version <= 1.8.7
-
-    $KCODE = 'UTF8'
-    require 'rubygems'
-    require 'cyrillizer'
-    puts 'kirilica'.to_cyr
-    puts 'латиница'.to_lat
-
-- Ruby version >= 1.9.1
+== USAGE
 
     require 'cyrillizer'
     puts 'kirilica'.to_cyr
     puts 'латиница'.to_lat
 
-== INSTALL:
+== INSTALL
 
-    [sudo] gem install cyrillizer
+    gem install cyrillizer
 
-To run the scenarios/specs, you have to first install cucumber and rspec gems
+== TESTS
 
-    [sudo] gem install cucumber
-    [sudo] gem install rspec
-
-And then, use their command line utillities:
-
-    spec spec --options spec/spec.opts
-    cucumber features
+    bundle install
+    rspec spec
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 Dalibor Nasevic
+Copyright (c) 2009-2013 Dalibor Nasevic
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
