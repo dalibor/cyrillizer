@@ -1,23 +1,36 @@
-= cyrillizer
+# cyrillizer
 
-Character conversion from latin to cyrillic and vice versa
+Character conversion from latin to cyrillic and vice versa.
 
-== USAGE
+Please contribute conversion alphabets if yours is missing.
 
-    require 'cyrillizer'
-    puts 'kirilica'.to_cyr
-    puts 'латиница'.to_lat
-
-== INSTALL
+## INSTALL
 
     gem install cyrillizer
 
-== TESTS
+## USAGE
+
+    require 'cyrillizer'
+    puts 'kirilica'.to_cyr    # => 'кирилица'
+    puts 'латиница'.to_lat    # => 'latinica'
+
+Or change conversion language:
+
+    Cyrillizer.language = :russian
+    puts "пульт управления"   # => "pul't upravleniya"
+    puts "pul't upravleniya"  # => "пульт управления"
+
+## TESTS
 
     bundle install
     rspec spec
 
-== LICENSE:
+## CONTRIBUTORS
+
+- Vitaly Zemlyansky ([@vzemlyansky](https://github.com/vzemlyansky))
+- Peco Danajlovski ([@Vortex](https://github.com/Vortex))
+
+## LICENSE:
 
 (The MIT License)
 

@@ -1,3 +1,8 @@
+=== 0.2.0 2013-08-28
+  * Multi-language support
+  * Add Gemfile
+  * Remove Cucumber
+
 === 0.1.0 2009-11-08
 
   * Added to_lat and to_lat! methods
@@ -10,4 +15,3 @@
 === 0.0.1 2009-10-12
 
   * Initial release
-

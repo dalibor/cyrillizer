@@ -1,7 +1,7 @@
 require 'cyrillizer/converter'
 require 'cyrillizer/alphabet'
 
-# Add to_cyr method to all Strings
+# Add conversion methods to all strings
 class String
   include Cyrillizer::Converter
 end
