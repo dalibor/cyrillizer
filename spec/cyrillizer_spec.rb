@@ -25,8 +25,8 @@ describe "Convertor" do
     end
 
     it "can convert from different language" do
-      "пульт управления".to_lat.should == "pult upravleniya"
-      "pult upravleniya".to_cyr.should == "пулт управления"
+      "пульт управления".to_lat.should == "pul't upravleniya"
+      "pul't upravleniya".to_cyr.should == "пульт управления"
     end
   end
 
