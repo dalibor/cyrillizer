@@ -3,10 +3,8 @@
 require 'yaml'
 
 module Cyrillizer
-
+  attr_writer :language
   class << self
-    attr_writer :language
-
     def language
       @language ||= :macedonian
     end
@@ -17,7 +15,7 @@ module Cyrillizer
     end
 
     def alphabet
-      @alphabet ||= YAML.load_file("lib/alphabets/#{language}.yml")
+      @alphabet ||= YAML.load_file(File.join(File.dirname(__FILE__), "../alphabets/#{language.to_s}.yml"))
     end
   end
 end
