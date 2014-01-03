@@ -4,6 +4,7 @@ require 'yaml'
 
 module Cyrillizer
   attr_writer :language
+
   class << self
     def language
       @language ||= :macedonian
