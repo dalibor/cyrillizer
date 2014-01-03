@@ -22,12 +22,10 @@ module Cyrillizer
     private
 
     def code(text, alphabet)
-      from = alphabet.keys
-      to   = alphabet.values
-      from.each_with_index do |latin, i|
-        text.gsub!(latin, to[i])
+      alphabet.each do |from, to|
+        text.gsub!(from, to)
       end
-       text
+      text
     end
 
     def alphabet

@@ -6,12 +6,14 @@ describe "Convertor" do
   context "conversion" do
     it "converts to cyrilic" do
       "Cela rechenica na latinica".to_cyr.should == "Цела реченица на латиница"
-      "Cela rechenica na latinica".to_cyr!.should == "Цела реченица на латиница"
+      "Cela rechenica na latinica".to_cyr.should == "Цела реченица на латиница"
+      "Kjeljav Dzhip".to_cyr.should == "Ќељав Џип"
     end
 
     it "converts to latin" do
       "Цела реченица на латиница".to_lat.should == "Cela rechenica na latinica"
       "Цела реченица на латиница".to_lat!.should == "Cela rechenica na latinica"
+      "Ќељав Џип".to_lat.should == "Kjeljav Dzhip"
     end
   end
 
