@@ -1,3 +1,5 @@
+![Travis status](https://travis-ci.org/dalibor/cyrillizer.png)
+
 # cyrillizer
 
 Character conversion from latin to cyrillic and vice versa.
