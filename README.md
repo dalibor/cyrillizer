@@ -29,8 +29,7 @@ Or change conversion language:
 
 ## CONTRIBUTORS
 
-- Vitaly Zemlyansky ([@vzemlyansky](https://github.com/vzemlyansky))
-- Peco Danajlovski ([@Vortex](https://github.com/Vortex))
+See [contributors](https://github.com/dalibor/cyrillizer/graphs/contributors) list.
 
 ## LICENSE:
 
