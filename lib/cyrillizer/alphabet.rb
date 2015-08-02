@@ -15,6 +15,13 @@ module Cyrillizer
       @alphabet = nil
     end
 
+    def alphabet=(file)
+      if file
+        @alphabet = YAML.load_file(file)
+        @language = File.basename(file, File.extname(file))
+      end
+    end
+
     def alphabet
       @alphabet ||= YAML.load_file(File.join(File.dirname(__FILE__), "../alphabets/#{language.to_s}.yml"))
     end

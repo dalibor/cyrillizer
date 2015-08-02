@@ -4,8 +4,6 @@
 
 Character conversion from latin to cyrillic and vice versa.
 
-Please contribute conversion alphabets if yours is missing.
-
 ## INSTALL
 
     gem install cyrillizer
@@ -16,11 +14,17 @@ Please contribute conversion alphabets if yours is missing.
     puts 'kirilica'.to_cyr    # => 'кирилица'
     puts 'латиница'.to_lat    # => 'latinica'
 
-Or change conversion language:
+Specify conversion language:
 
     Cyrillizer.language = :russian
     puts "пульт управления"   # => "pul't upravleniya"
     puts "pul't upravleniya"  # => "пульт управления"
+
+Contribute conversion alphabets if you want yours built into the gem.
+
+Or use your own custom alphabet:
+
+    Cyrillizer.alphabet = "alphabet/russian.yml" # path to the alphabet
 
 ## TESTS
 
@@ -35,7 +39,7 @@ See [contributors](https://github.com/dalibor/cyrillizer/graphs/contributors) li
 
 (The MIT License)
 
-Copyright (c) 2009-2013 Dalibor Nasevic
+Copyright (c) 2009-2015 Dalibor Nasevic
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
