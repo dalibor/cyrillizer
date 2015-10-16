@@ -61,7 +61,7 @@ describe Cyrillizer::Converter do
     end
   end
 
-  describe "using a different language" do
+  describe "using russion language" do
     before :each do
       Cyrillizer.language = :russian
     end
@@ -73,6 +73,21 @@ describe Cyrillizer::Converter do
     it "can convert from different language" do
       "пульт управления".to_lat.should == "pul't upravleniya"
       "pul't upravleniya".to_cyr.should == "пульт управления"
+    end
+  end
+
+  describe "using serbian language" do
+    before :each do
+      Cyrillizer.language = :serbian
+    end
+
+    after :each do
+      Cyrillizer.language = nil
+    end
+
+    it "can convert from different language" do
+      "њ".to_lat.should == "nj"
+      "nj".to_cyr.should == "њ"
     end
   end
 end
