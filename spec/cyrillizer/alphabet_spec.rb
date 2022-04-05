@@ -18,6 +18,15 @@ RSpec.describe Cyrillizer do
       Cyrillizer.language = :russian
       expect(Cyrillizer.language).to eq(:russian)
     end
+
+    it "can load all defined languages" do
+      Dir.children("lib/alphabets").each do |file|
+        language = file.chomp('.yml')
+        Cyrillizer.language = language
+        expect('Б'.to_lat).to eq('B')
+        expect('B'.to_cyr).to eq('Б')
+      end
+    end
   end
 
   describe ".alphabet" do
