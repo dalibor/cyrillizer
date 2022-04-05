@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - master
+
+jobs:
+  specs:
+    runs-on: ${{ matrix.os }}
+    name: specs ruby-${{ matrix.ruby }} ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-20.04, macos-11 ]
+        ruby: [ 2.7, 3.0, 3.1 ]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler: default
+          bundler-cache: true
+
+      - name: Run specs
+        run: |
+          bundle exec rspec spec
