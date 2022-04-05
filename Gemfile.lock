@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cyrillizer (0.2.3)
+    cyrillizer (0.3.0)
 
 GEM
   remote: https://rubygems.org/
