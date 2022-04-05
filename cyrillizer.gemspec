@@ -16,5 +16,5 @@ Gem::Specification.new do |gem|
   gem.version       = Cyrillizer::VERSION
   gem.license       = "MIT"
 
-  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rspec", "~> 3.11.0"
 end

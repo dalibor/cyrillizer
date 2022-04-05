@@ -1,5 +1,3 @@
-![Travis status](https://travis-ci.org/dalibor/cyrillizer.png)
-
 # cyrillizer
 
 Character conversion from latin to cyrillic and vice versa.
@@ -17,8 +15,8 @@ Character conversion from latin to cyrillic and vice versa.
 Specify conversion language:
 
     Cyrillizer.language = :russian
-    puts "пульт управления"   # => "pul't upravleniya"
-    puts "pul't upravleniya"  # => "пульт управления"
+    puts "пульт управления".to_lat   # => "pul't upravleniya"
+    puts "pul't upravleniya".to_cyr  # => "пульт управления"
 
 Contribute conversion alphabets if you want yours built into the gem.
 

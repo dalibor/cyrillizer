@@ -2,62 +2,62 @@
 
 require 'spec_helper'
 
-describe Cyrillizer::Converter do
+RSpec.describe Cyrillizer::Converter do
   let(:string) { 'anything' }
 
 
   describe "#to_cyr" do
     it "converts latin to cyrillic" do
-      "Cela rechenica na latinica".to_cyr.should == "Цела реченица на латиница"
+      expect('Cela rechenica na latinica'.to_cyr).to eq('Цела реченица на латиница')
     end
 
     it "converts letters with multiple characters" do
-      "Kjeljav Dzhip".to_cyr.should == "Ќељав Џип"
+      expect('Kjeljav Dzhip'.to_cyr).to eq('Ќељав Џип')
     end
 
     it "it copies string before changing" do
-      string.to_cyr.object_id.should_not == string.object_id
+      expect(string.to_cyr.object_id).not_to eq(string.object_id)
     end
   end
 
   describe "#to_cyr!" do
     it "converts latin to cyrilic" do
-      "Cela rechenica na latinica".to_cyr!.should == "Цела реченица на латиница"
+      expect('Cela rechenica na latinica'.to_cyr!).to eq('Цела реченица на латиница')
     end
 
     it "changes original string" do
-      string.to_cyr!.object_id.should == string.object_id
+      expect(string.to_cyr!.object_id).to eq(string.object_id)
     end
   end
 
   describe "#to_lat" do
     it "converts cyrillic to latin" do
-      "Цела реченица на латиница".to_lat.should == "Cela rechenica na latinica"
+      expect('Цела реченица на латиница'.to_lat).to eq('Cela rechenica na latinica')
     end
 
     it "converts letters with multiple characters" do
-      "Ќељав Џип".to_lat.should == "Kjeljav Dzhip"
+      expect('Ќељав Џип'.to_lat).to eq('Kjeljav Dzhip')
     end
 
     it "it copies string before changing" do
-      string.to_lat.object_id.should_not == string.object_id
+      expect(string.to_lat.object_id).not_to eq(string.object_id)
     end
   end
 
   describe "#to_lat!" do
     it "converts cyrilic to latin" do
-      "Цела реченица на латиница".to_lat!.should == "Cela rechenica na latinica"
+      expect('Цела реченица на латиница'.to_lat!).to eq('Cela rechenica na latinica')
     end
 
     it "changes original string" do
-      string.to_lat!.object_id.should == string.object_id
+      expect(string.to_lat!.object_id).to eq(string.object_id)
     end
   end
 
   context "conversion" do
     it "converts to latin" do
-      "Цела реченица на латиница".to_lat.should == "Cela rechenica na latinica"
-      "Ќељав Џип".to_lat.should == "Kjeljav Dzhip"
+      expect('Цела реченица на латиница'.to_lat).to eq('Cela rechenica na latinica')
+      expect('Ќељав Џип'.to_lat).to eq('Kjeljav Dzhip')
     end
   end
 
@@ -71,8 +71,8 @@ describe Cyrillizer::Converter do
     end
 
     it "can convert from different language" do
-      "пульт управления".to_lat.should == "pul't upravleniya"
-      "pul't upravleniya".to_cyr.should == "пульт управления"
+      expect("пульт управления".to_lat).to eq("pul't upravleniya")
+      expect("pul't upravleniya".to_cyr).to eq("пульт управления")
     end
   end
 
@@ -86,8 +86,8 @@ describe Cyrillizer::Converter do
     end
 
     it "can convert from different language" do
-      "њ".to_lat.should == "nj"
-      "nj".to_cyr.should == "њ"
+      expect('њ'.to_lat).to eq('nj')
+      expect('nj'.to_cyr).to eq('њ')
     end
   end
 end
